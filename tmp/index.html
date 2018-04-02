@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>node.js - The Net Ninja</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+	
+	<!-- src/index.html -->
+  
+    <!-- inject:css -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- endinject -->
+
+
+</head>
+<body class="jumbotron container">
+	<!-- inject:js -->
+    <script src="exercises/app.js"></script>
+    <script src="exercises/stuff.js"></script>
+    <!-- endinject -->
+<h1>node.js</h1>
+<section class="nodejs">
+	<h2>What is node.js</h2>
+	<p>Is a platform that allows us to run JS on a computer or a server, this way is not completely necesary to learn a different programming language to crate a whole app.</p>
+	<p>With node.js we can read, delete and updoate files like any other server side language.</p>
+	<p>With node.js we can communicate easily with a database</p>
+
+	<h2>Why node.js</h2>
+	<p>It uses JS</p>
+	<p>Is very fast, it runs on the V8 engine and uses nonblocking code</p>
+	<p>Huge ecosystem of open source packages (npm)</p>
+	<p>Great for real time services like chats</p>
+</section>
+
+<section class="v8engine">
+	<h2>The V8 engine</h2>
+	<p>The engine converts JS to machine code which is understandable by the computer.</p>
+	<p>node.js is written in c++ and V8 as well, V8 is embedded in node.js.  V8 gives the powers to JS to do things that JS was not capable to do before like connecting with databases.</p>
+</section>
+
+<section class="globalObject">
+	<h2>The Global Object</h2>
+	<p>Cuando estamos en un explorador, el objeto global es <strong>window</strong> y podemos usar events que se encuentran viviendo en este entorno <code>console.log alert o setTimeout, </code> en node.js el objecto global ya no es <strong>window</strong> porque no estamos en un explorador, en node el objecto global se denomina global y aquí como en el explorados también tenemos acceso a algunos métodos que podemos usar de inmediato.</p>
+
+	<p>En la siguiente documentación podemos encontrar mas información <a href="https://nodejs.org/api/globals.html"><i class="fas fa-eye"></i></a> </p>
+
+</section>
+
+<section class="">
+	<h2>Function Expressions</h2>
+	
+	<p>en node.js podemos usar function expressions o function declarations de la misma forma en que lo hacemos den JS</p>
+	<script src="https://gist.github.com/andrpueb/1105e787ec9826a6f6c0ea9e503717ad.js"></script>
+
+</section>
+
+<section>
+	<h2>Modules and require()</h2>
+	<p>Un modulo es un pedazo de código que podemos usar en donde queramos, para hacerlo debemos exportarlo e importarlo <code>require</code> en donde lo queramos usar:</p>
+
+	<p>Exportamos el codigo que queremos exportar, podemos exportar una o varias funciones, lo haccemos de la siguiente manera:</p>
+	<script src="https://gist.github.com/andrpueb/fbce506e954d5eb9d86f771fe56fe375.js"></script>
+
+	<p>Para usar esa función la debemos importar usando <code>require</code> e importamos el archivo en donde se encuentra:</p>
+	<script src="https://gist.github.com/andrpueb/64b976e7936400a05f99024f49cb790a.js"></script>
+
+	<p>También si tenemos varios recursos que queramos importar desde un mismo archivo lo podemos hacer de la sieguiente forma:</p>
+	<p>A través de dot notation, le asignamos propiedades al objeto exports las cuales son los recursos que queremos exportar.</p>
+	<script src="https://gist.github.com/andrpueb/5ca5cc3571d632bcd6c1345ccdbdb008.js"></script>
+
+	<p>Para utilizarlos lo hacemos de la misma forma, a través del dot notation:</p>
+	<script src="https://gist.github.com/andrpueb/e1cb22f3f286ac675bd2a02d1ed80abf.js"></script>
+
+	
+
+
+
+</section>
+
+
+</body>
+</html>
+
